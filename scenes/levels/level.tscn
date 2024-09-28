@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd83kntlfisx8"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_lble1"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_i32s4"]
+normal = Vector2(-1, 0)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_lble1")
+players = Array[PackedScene]([null, null])
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -581.0
+offset_top = -326.0
+offset_right = 575.0
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.212867, 0.198799, 0.28648, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Finish" type="Area2D" parent="."]
+position = Vector2(440, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
+shape = SubResource("WorldBoundaryShape2D_i32s4")
+
+[node name="ColorRect" type="ColorRect" parent="Finish"]
+offset_top = -326.0
+offset_right = 40.0
+offset_bottom = 326.0
+
+[node name="SpawnPoints" type="Node" parent="."]
+
+[node name="Spawn" type="Node2D" parent="SpawnPoints"]
+position = Vector2(-450, -210)
+
+[node name="Spawn2" type="Node2D" parent="SpawnPoints"]
+position = Vector2(-450, -75)
+
+[node name="Spawn3" type="Node2D" parent="SpawnPoints"]
+position = Vector2(-450, 75)
+
+[node name="Spawn4" type="Node2D" parent="SpawnPoints"]
+position = Vector2(-450, 210)
