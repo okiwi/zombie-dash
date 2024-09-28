@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dd83kntlfisx8"]
+[gd_scene load_steps=16 format=4 uid="uid://dd83kntlfisx8"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_lble1"]
 [ext_resource type="PackedScene" uid="uid://bn88jjcoejphj" path="res://scenes/zombie/zombie.tscn" id="2_f4kno"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scenes/players/crosshair.gd" id="5_4abg3"]
 [ext_resource type="Texture2D" uid="uid://b0ee0jb33a803" path="res://assets/sprites/crosshairs.png" id="5_mfnkh"]
 [ext_resource type="AudioStream" uid="uid://c3lx4ti2i87le" path="res://assets/sounds/shot.mp3" id="7_cc52t"]
+[ext_resource type="Texture2D" uid="uid://ca4ooasvktrmt" path="res://assets/sprites/bullet.png" id="8_voe0t"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_74hnv"]
 load_path = "res://.godot/imported/TX Tileset Grass.png-a0f11d92068aff76ba0efead5ade7baf.ctex"
@@ -322,7 +323,6 @@ z_index = 200
 position = Vector2(0, -60)
 script = ExtResource("5_4abg3")
 input_prefix = "player_one"
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CrosshairOne"]
 shape = SubResource("RectangleShape2D_qrgef")
@@ -335,6 +335,12 @@ texture = SubResource("AtlasTexture_rbb3m")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CrosshairOne"]
 stream = ExtResource("7_cc52t")
 volume_db = 20.0
+
+[node name="Bullet" type="Sprite2D" parent="CrosshairOne"]
+position = Vector2(-38, 46)
+scale = Vector2(0.0199506, 0.0199506)
+texture = ExtResource("8_voe0t")
+offset = Vector2(-70, -424)
 
 [node name="CrosshairTwo" type="Area2D" parent="."]
 z_index = 200
@@ -354,3 +360,9 @@ texture = SubResource("AtlasTexture_rbb3m")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CrosshairTwo"]
 stream = SubResource("AudioStreamMP3_eka5m")
 volume_db = 20.0
+
+[node name="Bullet" type="Sprite2D" parent="CrosshairTwo"]
+position = Vector2(-38, 46)
+scale = Vector2(0.0199506, 0.0199506)
+texture = ExtResource("8_voe0t")
+offset = Vector2(-70, -424)

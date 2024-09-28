@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://2aeraftlkaqi"]
+[gd_scene load_steps=5 format=3 uid="uid://2aeraftlkaqi"]
 
 [ext_resource type="PackedScene" uid="uid://dd83kntlfisx8" path="res://scenes/levels/level.tscn" id="1_wq8jt"]
 [ext_resource type="Script" path="res://restart_button.gd" id="2_vyo6a"]
+[ext_resource type="AudioStream" uid="uid://dcknk5bdt173" path="res://assets/sounds/victory.mp3" id="3_07ge7"]
 [ext_resource type="AudioStream" uid="uid://dkmajdds52msi" path="res://assets/sounds/music.mp3" id="3_xc7f2"]
 
 [node name="Main" type="Node"]
@@ -52,3 +53,6 @@ script = ExtResource("2_vyo6a")
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_xc7f2")
 autoplay = true
+
+[node name="Victory" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_07ge7")

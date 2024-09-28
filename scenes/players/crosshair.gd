@@ -27,6 +27,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed(input_prefix + "_shoot") and not has_shot:
 		$AudioStreamPlayer2D.play()
 		has_shot = true
+		$Bullet.visible = false
 		
 		if not target:
 			return

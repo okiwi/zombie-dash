@@ -39,4 +39,6 @@ func spawn_characters() -> void:
 func _on_character_finished(body) -> void:
 	($/root/Main/GUI as Control).visible = true
 	($/root/Main/GUI/Label as Label).text = body.name + " wins!"
+	$/root/Main/Music.playing = false
+	$/root/Main/Victory.play()
 	
