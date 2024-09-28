@@ -33,9 +33,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			return
 		
 		if target.name == "PlayerOne":
-			$"../CrosshairOne".queue_free()
+			$"../CrosshairOne".visible = false
 		if target.name == "PlayerTwo":
-			$"../CrosshairTwo".queue_free()
+			$"../CrosshairTwo".visible = false
 			
 		target.set_physics_process(false)
 		target.find_child("AnimatedSprite2D").play("death")

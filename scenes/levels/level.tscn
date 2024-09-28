@@ -278,7 +278,7 @@ sources/0 = SubResource("TileSetAtlasSource_fr3nq")
 normal = Vector2(-1, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qrgef"]
-size = Vector2(54, 54)
+size = Vector2(28, 28)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rbb3m"]
 atlas = ExtResource("5_mfnkh")
