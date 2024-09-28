@@ -1,16 +1,11 @@
 extends Character
 
 
-@export var finish_line: Area2D
 @export var input_prefix: String
 @export var run_boost: float = 60
 
 
 var speed_boost
-
-
-func _ready() -> void:
-	finish_line.body_entered.connect(_on_body_entered)
 
 
 func _physics_process(_delta: float) -> void:
@@ -31,7 +26,3 @@ func _physics_process(_delta: float) -> void:
 	velocity = direction * (speed + speed_boost)
 	
 	move_and_slide()
-
-
-func _on_body_entered(_body):
-	position = Vector2(-450, 0)
