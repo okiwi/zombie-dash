@@ -10,7 +10,6 @@ size = Vector2(58, 118)
 
 [node name="Zombie" type="CharacterBody2D"]
 script = ExtResource("1_7wpk0")
-delay = Array[float]([0.4, 1.0])
 sprite_frames = Array[SpriteFrames]([ExtResource("2_8m1jv"), ExtResource("3_rc68x"), ExtResource("4_kcvoe")])
 metadata/_edit_group_ = true
 

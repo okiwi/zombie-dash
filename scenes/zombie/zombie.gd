@@ -1,10 +1,11 @@
 extends Character
 
 
-@export var delay: Array[float] = [2, 3]
+@export var min_delay: float = 0.4
+@export var max_delay: float = 1
 
 
-var is_moving: bool = false
+@export var is_moving: bool = false
 
 
 func _ready() -> void:
@@ -23,5 +24,5 @@ func _physics_process(_delta: float) -> void:
 
 func _on_timeout():
 	randomize()
-	%Timer.wait_time = randf_range(delay[0], delay[1])
+	%Timer.wait_time = randf_range(min_delay, max_delay)
 	is_moving = !is_moving

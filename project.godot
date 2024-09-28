@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Zombie"
-run/main_scene="res://main.tscn"
+config/name="Zombie Rush"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
