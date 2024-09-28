@@ -1,9 +1,9 @@
 [gd_resource type="SpriteFrames" load_steps=29 format=3 uid="uid://w5p7b0fq4m0r"]
 
-[ext_resource type="Texture2D" uid="uid://cdtb3ljwe6pnq" path="res://assets/zombie_2/Dead.png" id="1_387x7"]
-[ext_resource type="Texture2D" uid="uid://clpv4gbunb1x1" path="res://assets/zombie_2/Idle.png" id="2_qqhtt"]
-[ext_resource type="Texture2D" uid="uid://cjn5vrgc38wj6" path="res://assets/zombie_2/Run.png" id="3_1br3v"]
-[ext_resource type="Texture2D" uid="uid://by3oh7h3mry4v" path="res://assets/zombie_2/Walk.png" id="4_qeo0e"]
+[ext_resource type="Texture2D" uid="uid://cdtb3ljwe6pnq" path="res://assets/sprites/zombie_2/Dead.png" id="1_387x7"]
+[ext_resource type="Texture2D" uid="uid://clpv4gbunb1x1" path="res://assets/sprites/zombie_2/Idle.png" id="2_qqhtt"]
+[ext_resource type="Texture2D" uid="uid://cjn5vrgc38wj6" path="res://assets/sprites/zombie_2/Run.png" id="3_1br3v"]
+[ext_resource type="Texture2D" uid="uid://by3oh7h3mry4v" path="res://assets/sprites/zombie_2/Walk.png" id="4_qeo0e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0eyql"]
 atlas = ExtResource("1_387x7")
@@ -119,7 +119,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_imo12")
 }],
-"loop": true,
+"loop": false,
 "name": &"death",
 "speed": 5.0
 }, {

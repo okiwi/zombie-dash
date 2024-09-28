@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bn88jjcoejphj"]
+[gd_scene load_steps=6 format=3 uid="uid://bn88jjcoejphj"]
 
 [ext_resource type="Script" path="res://scenes/zombie/zombie.gd" id="1_7wpk0"]
 [ext_resource type="SpriteFrames" uid="uid://bux1vjcetfh5c" path="res://resources/zombie_1_frames.tres" id="2_8m1jv"]
 [ext_resource type="SpriteFrames" uid="uid://w5p7b0fq4m0r" path="res://resources/zombie_2_frames.tres" id="3_rc68x"]
+[ext_resource type="SpriteFrames" uid="uid://baufp5u5muwll" path="res://resources/zombie_3_frames.tres" id="4_kcvoe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6al3e"]
 size = Vector2(58, 118)
@@ -10,7 +11,7 @@ size = Vector2(58, 118)
 [node name="Zombie" type="CharacterBody2D"]
 script = ExtResource("1_7wpk0")
 delay = Array[float]([0.4, 1.0])
-sprite_frames = Array[SpriteFrames]([ExtResource("2_8m1jv"), ExtResource("3_rc68x")])
+sprite_frames = Array[SpriteFrames]([ExtResource("2_8m1jv"), ExtResource("3_rc68x"), ExtResource("4_kcvoe")])
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

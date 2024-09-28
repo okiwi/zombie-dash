@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwmbnsjex56yc"]
+[gd_scene load_steps=6 format=3 uid="uid://cwmbnsjex56yc"]
 
 [ext_resource type="Script" path="res://scenes/players/player.gd" id="1_76gtj"]
 [ext_resource type="SpriteFrames" uid="uid://bux1vjcetfh5c" path="res://resources/zombie_1_frames.tres" id="2_7tinb"]
 [ext_resource type="SpriteFrames" uid="uid://w5p7b0fq4m0r" path="res://resources/zombie_2_frames.tres" id="3_4swd1"]
+[ext_resource type="SpriteFrames" uid="uid://baufp5u5muwll" path="res://resources/zombie_3_frames.tres" id="4_ebarv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wrs1"]
 size = Vector2(58, 118)
@@ -11,7 +12,7 @@ size = Vector2(58, 118)
 z_index = 100
 script = ExtResource("1_76gtj")
 input_prefix = "player_two"
-sprite_frames = Array[SpriteFrames]([ExtResource("2_7tinb"), ExtResource("3_4swd1")])
+sprite_frames = Array[SpriteFrames]([ExtResource("2_7tinb"), ExtResource("3_4swd1"), ExtResource("4_ebarv")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5wrs1")

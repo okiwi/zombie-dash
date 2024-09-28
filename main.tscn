@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://2aeraftlkaqi"]
+
+[ext_resource type="PackedScene" uid="uid://dd83kntlfisx8" path="res://scenes/levels/level.tscn" id="1_wq8jt"]
+[ext_resource type="Script" path="res://restart_button.gd" id="2_vyo6a"]
+[ext_resource type="AudioStream" uid="uid://dkmajdds52msi" path="res://assets/sounds/music.mp3" id="3_xc7f2"]
+
+[node name="Main" type="Node"]
+
+[node name="Level" parent="." instance=ExtResource("1_wq8jt")]
+
+[node name="GUI" type="Control" parent="."]
+z_index = 300
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -576.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="GUI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -189.0
+offset_top = 168.0
+offset_right = 189.0
+offset_bottom = 256.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 64
+text = "
+"
+
+[node name="RestartButton" type="Button" parent="GUI"]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 308.0
+offset_right = 622.0
+offset_bottom = 339.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play Again!"
+script = ExtResource("2_vyo6a")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xc7f2")
+autoplay = true

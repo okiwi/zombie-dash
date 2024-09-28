@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0ee0jb33a803"
-path="res://.godot/imported/ELR_Corsshairs.png-129eb5c3c8f0d14bc7430ed4b1a0fd56.ctex"
+uid="uid://cjn5vrgc38wj6"
+path="res://.godot/imported/Run.png-edbb78795873cf459abe0d094dbf8913.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ELR_Corsshairs.png"
-dest_files=["res://.godot/imported/ELR_Corsshairs.png-129eb5c3c8f0d14bc7430ed4b1a0fd56.ctex"]
+source_file="res://assets/sprites/zombie_2/Run.png"
+dest_files=["res://.godot/imported/Run.png-edbb78795873cf459abe0d094dbf8913.ctex"]
 
 [params]
 

@@ -14,6 +14,7 @@ var characters: Array[Character]
 
 
 func _ready() -> void:
+	($/root/Main/GUI as Control).visible = false
 	finish_line.body_entered.connect(_on_character_finished)
 	
 	spawn_characters()
@@ -21,7 +22,9 @@ func _ready() -> void:
 
 func spawn_characters() -> void:
 	for i in zombies_num:
-		characters.append(zombie_scene.instantiate())
+		var zombie = zombie_scene.instantiate()
+		zombie.name = "Zombie " + str(i + 1)
+		characters.append(zombie)
 	for player in players:
 		characters.append(player.instantiate())
 	
@@ -34,4 +37,6 @@ func spawn_characters() -> void:
 
 
 func _on_character_finished(body) -> void:
-	print(body.name)
+	($/root/Main/GUI as Control).visible = true
+	($/root/Main/GUI/Label as Label).text = body.name + " wins!"
+	
