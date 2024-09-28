@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=4 uid="uid://dd83kntlfisx8"]
+[gd_scene load_steps=15 format=4 uid="uid://dd83kntlfisx8"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_lble1"]
 [ext_resource type="PackedScene" uid="uid://bn88jjcoejphj" path="res://scenes/zombie/zombie.tscn" id="2_f4kno"]
-[ext_resource type="PackedScene" uid="uid://ji8xbqpyka6s" path="res://scenes/players/player_one.tscn" id="3_hpd6g"]
-[ext_resource type="PackedScene" uid="uid://cwmbnsjex56yc" path="res://scenes/players/player_two.tscn" id="4_g23f4"]
+[ext_resource type="PackedScene" uid="uid://cwmbnsjex56yc" path="res://scenes/players/player.tscn" id="4_g23f4"]
 [ext_resource type="Script" path="res://scenes/players/crosshair.gd" id="5_4abg3"]
 [ext_resource type="Texture2D" uid="uid://b0ee0jb33a803" path="res://assets/sprites/crosshairs.png" id="5_mfnkh"]
 [ext_resource type="AudioStream" uid="uid://c3lx4ti2i87le" path="res://assets/sounds/shot.mp3" id="7_cc52t"]
@@ -290,7 +289,7 @@ data = PackedByteArray("//vQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASW5mbwAA
 [node name="Level" type="Node2D" node_paths=PackedStringArray("spawn_points")]
 script = ExtResource("1_lble1")
 zombie_scene = ExtResource("2_f4kno")
-players = Array[PackedScene]([ExtResource("3_hpd6g"), ExtResource("4_g23f4")])
+player_scene = ExtResource("4_g23f4")
 spawn_points = NodePath("SpawnPoints")
 
 [node name="Background" type="TileMapLayer" parent="."]
@@ -318,50 +317,48 @@ position = Vector2(-450, 75)
 [node name="Spawn4" type="Node2D" parent="SpawnPoints"]
 position = Vector2(-450, 210)
 
-[node name="CrosshairOne" type="Area2D" parent="."]
+[node name="Crosshair1" type="Area2D" parent="."]
 z_index = 200
 position = Vector2(0, -60)
 script = ExtResource("5_4abg3")
-input_prefix = "player_one"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CrosshairOne"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crosshair1"]
 shape = SubResource("RectangleShape2D_qrgef")
 
-[node name="Sprite2D" type="Sprite2D" parent="CrosshairOne"]
+[node name="Sprite2D" type="Sprite2D" parent="Crosshair1"]
 modulate = Color(0.118783, 0.7446, 1, 1)
 scale = Vector2(3.85714, 3.85714)
 texture = SubResource("AtlasTexture_rbb3m")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CrosshairOne"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Crosshair1"]
 stream = ExtResource("7_cc52t")
 volume_db = 20.0
 
-[node name="Bullet" type="Sprite2D" parent="CrosshairOne"]
+[node name="Bullet" type="Sprite2D" parent="Crosshair1"]
 position = Vector2(-38, 46)
 scale = Vector2(0.0199506, 0.0199506)
 texture = ExtResource("8_voe0t")
 offset = Vector2(-70, -424)
 
-[node name="CrosshairTwo" type="Area2D" parent="."]
+[node name="Crosshair2" type="Area2D" parent="."]
 z_index = 200
 position = Vector2(0, 60)
 script = ExtResource("5_4abg3")
-input_prefix = "player_two"
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CrosshairTwo"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crosshair2"]
 shape = SubResource("RectangleShape2D_qrgef")
 
-[node name="Sprite2D" type="Sprite2D" parent="CrosshairTwo"]
+[node name="Sprite2D" type="Sprite2D" parent="Crosshair2"]
 modulate = Color(1, 0.578368, 0.516824, 1)
 scale = Vector2(3.85714, 3.85714)
 texture = SubResource("AtlasTexture_rbb3m")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CrosshairTwo"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Crosshair2"]
 stream = SubResource("AudioStreamMP3_eka5m")
 volume_db = 20.0
 
-[node name="Bullet" type="Sprite2D" parent="CrosshairTwo"]
+[node name="Bullet" type="Sprite2D" parent="Crosshair2"]
 position = Vector2(-38, 46)
 scale = Vector2(0.0199506, 0.0199506)
 texture = ExtResource("8_voe0t")

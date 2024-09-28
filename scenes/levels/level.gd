@@ -2,8 +2,9 @@ extends Node2D
 
 
 @export var zombies_num: int = 2
+@export var players: int = 2
 @export var zombie_scene: PackedScene
-@export var players: Array[PackedScene]
+@export var player_scene: PackedScene
 @export var spawn_points: Node
 
 
@@ -25,8 +26,11 @@ func spawn_characters() -> void:
 		var zombie = zombie_scene.instantiate()
 		zombie.name = "Zombie " + str(i + 1)
 		characters.append(zombie)
-	for player in players:
-		characters.append(player.instantiate())
+	for i in players:
+		var player = player_scene.instantiate()
+		player.number = i + 1
+		player.name = "Player" + str(i + 1)
+		characters.append(player)
 	
 	characters.shuffle()
 	

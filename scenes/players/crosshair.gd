@@ -2,7 +2,7 @@ extends Area2D
 
 
 @export var speed: float = 150.0
-@export var input_prefix: String
+@export var number: int
 
 
 var has_shot := false
@@ -15,8 +15,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector(
-		input_prefix + "_crosshair_left", input_prefix + "_crosshair_right",
-		input_prefix + "_crosshair_up", input_prefix + "_crosshair_down",
+		"crosshair_left" + str(number), "crosshair_right" + str(number),
+		"crosshair_up" + str(number), "crosshair_down" + str(number),
 	)
 	
 	var velocity = direction.normalized() * speed * delta
@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed(input_prefix + "_shoot") and not has_shot:
+	if event.is_action_pressed("shoot" + str(number)) and not has_shot:
 		$AudioStreamPlayer2D.play()
 		has_shot = true
 		$Bullet.visible = false
@@ -32,10 +32,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if not target:
 			return
 		
-		if target.name == "PlayerOne":
-			$"../CrosshairOne".visible = false
-		if target.name == "PlayerTwo":
-			$"../CrosshairTwo".visible = false
+		get_parent().find_child("Crosshair" + str(target.number)).visible = false
 			
 		target.set_physics_process(false)
 		target.find_child("AnimatedSprite2D").play("death")

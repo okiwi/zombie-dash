@@ -8,6 +8,7 @@
 [node name="Main" type="Node"]
 
 [node name="Level" parent="." instance=ExtResource("1_js5b6")]
+players = 2
 
 [node name="GUI" type="Control" parent="."]
 z_index = 300
