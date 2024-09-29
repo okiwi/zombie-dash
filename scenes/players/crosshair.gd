@@ -3,14 +3,17 @@ extends Area2D
 
 @export var speed: float = 150.0
 @export var number: int
+@export var color: Color
 
 
 var has_shot := false
 var target: Node
 
 
-func _ready() -> void:
+func _ready() -> void: 
 	body_entered.connect(_on_body_entered)
+	
+	$Sprite2D.modulate = color
 
 
 func _physics_process(delta: float) -> void:
@@ -32,11 +35,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		if not target:
 			return
 		
-		get_parent().find_child("Crosshair" + str(target.number)).visible = false
-			
 		target.set_physics_process(false)
 		target.find_child("AnimatedSprite2D").play("death")
-			
+		
+		if not target.is_in_group("players"):
+			return
+		
+		var target_crosshair = get_node("../Crosshair" + str(target.number))
+		target_crosshair.visible = false
+		
 
 
 func _on_body_entered(body):

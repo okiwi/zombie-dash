@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://2aeraftlkaqi"]
+[gd_scene load_steps=6 format=3 uid="uid://2aeraftlkaqi"]
 
 [ext_resource type="PackedScene" uid="uid://dd83kntlfisx8" path="res://scenes/levels/level.tscn" id="1_js5b6"]
+[ext_resource type="FontFile" uid="uid://b2jreyoh2sste" path="res://assets/fonts/Melted Monster.ttf" id="2_iyjlm"]
 [ext_resource type="Script" path="res://restart_button.gd" id="2_v5emd"]
 [ext_resource type="AudioStream" uid="uid://dkmajdds52msi" path="res://assets/sounds/music.mp3" id="3_3vxcx"]
 [ext_resource type="AudioStream" uid="uid://dcknk5bdt173" path="res://assets/sounds/victory.mp3" id="4_g1m4h"]
@@ -8,7 +9,6 @@
 [node name="Main" type="Node"]
 
 [node name="Level" parent="." instance=ExtResource("1_js5b6")]
-players = 2
 
 [node name="GUI" type="Control" parent="."]
 z_index = 300
@@ -34,9 +34,10 @@ offset_top = 168.0
 offset_right = 189.0
 offset_bottom = 256.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_iyjlm")
 theme_override_font_sizes/font_size = 64
-text = "
-"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="RestartButton" type="Button" parent="GUI"]
 layout_mode = 0

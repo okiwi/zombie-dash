@@ -6,6 +6,7 @@ extends Node2D
 @export var zombie_scene: PackedScene
 @export var player_scene: PackedScene
 @export var spawn_points: Node
+@export var colors: Array[Color]
 
 
 var characters: Array[Character]
@@ -28,8 +29,12 @@ func spawn_characters() -> void:
 		characters.append(zombie)
 	for i in players:
 		var player = player_scene.instantiate()
-		player.number = i + 1
-		player.name = "Player" + str(i + 1)
+		player.number = i
+		player.name = "Player" + str(i)
+		var player_color = colors.pick_random()
+		colors.remove_at(colors.find(player_color))
+		player.crosshair_color = player_color
+		player.display_name = "Player " + NumberToWords.to_words(i + 1).capitalize()
 		characters.append(player)
 	
 	characters.shuffle()
@@ -42,7 +47,7 @@ func spawn_characters() -> void:
 
 func _on_character_finished(body) -> void:
 	($/root/Main/GUI as Control).visible = true
-	($/root/Main/GUI/Label as Label).text = body.name + " wins!"
+	($/root/Main/GUI/Label as Label).text = body.display_name + " wins!"
 	$/root/Main/Music.playing = false
 	$/root/Main/Victory.play()
 	

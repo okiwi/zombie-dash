@@ -3,15 +3,22 @@ extends Character
 
 @export var number: int
 @export var run_boost: float = 60
+@export var crosshair_scene: PackedScene = preload("res://scenes/players/crosshair.tscn")
+@export var crosshair_color: Color
 
+
+var display_name: String
 
 var speed_boost
 
 
 func _ready() -> void:
-	var crosshair = get_parent().find_child("Crosshair" + str(number))
+	var crosshair = crosshair_scene.instantiate()
 	crosshair.number = number
 	crosshair.name = "Crosshair" + str(number)
+	crosshair.position.y = randf_range(-100, 100)
+	crosshair.color = crosshair_color
+	get_parent().add_child(crosshair)
 
 
 func _physics_process(_delta: float) -> void:

@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsa1rki5h06hq"]
+
+[ext_resource type="Script" path="res://scenes/players/crosshair.gd" id="1_gycjl"]
+[ext_resource type="Texture2D" uid="uid://b0ee0jb33a803" path="res://assets/sprites/crosshairs.png" id="2_xdpcc"]
+[ext_resource type="AudioStream" uid="uid://c3lx4ti2i87le" path="res://assets/sounds/shot.mp3" id="3_lwmjf"]
+[ext_resource type="Texture2D" uid="uid://ca4ooasvktrmt" path="res://assets/sprites/bullet.png" id="4_adtc0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrgef"]
+size = Vector2(28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbb3m"]
+atlas = ExtResource("2_xdpcc")
+region = Rect2(97, 49, 14, 14)
+
+[node name="Crosshair" type="Area2D"]
+z_index = 200
+position = Vector2(0, -60)
+script = ExtResource("1_gycjl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_qrgef")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.118783, 0.7446, 1, 1)
+scale = Vector2(3.85714, 3.85714)
+texture = SubResource("AtlasTexture_rbb3m")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_lwmjf")
+volume_db = 20.0
+
+[node name="Bullet" type="Sprite2D" parent="."]
+position = Vector2(-38, 46)
+scale = Vector2(0.0199506, 0.0199506)
+texture = ExtResource("4_adtc0")
+offset = Vector2(-70, -424)

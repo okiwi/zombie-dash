@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wrs1"]
 size = Vector2(58, 118)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["players"]]
 z_index = 100
 script = ExtResource("1_fff2d")
 sprite_frames = Array[SpriteFrames]([ExtResource("2_g323d"), ExtResource("3_vyhye"), ExtResource("4_mstxp")])
