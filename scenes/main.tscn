@@ -11,6 +11,7 @@
 [node name="Level" parent="." instance=ExtResource("1_js5b6")]
 
 [node name="GUI" type="Control" parent="."]
+process_mode = 3
 z_index = 300
 layout_mode = 3
 anchors_preset = 15
@@ -57,4 +58,5 @@ stream = ExtResource("3_3vxcx")
 autoplay = true
 
 [node name="Victory" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = ExtResource("4_g1m4h")

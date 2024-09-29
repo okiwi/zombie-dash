@@ -43,6 +43,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		
 		var target_crosshair = get_node("../Crosshair" + str(target.number))
 		target_crosshair.visible = false
+		target_crosshair.has_shot = true
 		
 
 
