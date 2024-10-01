@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhh64knusy81r"
-path="res://.godot/imported/sky.jpeg-95ef2aa95e252ea4b4fe610d3b037f34.ctex"
+uid="uid://cjn5vrgc38wj6"
+path="res://.godot/imported/Run.png-131051795b7b71d3c26c641b32f9e262.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/sky.jpeg"
-dest_files=["res://.godot/imported/sky.jpeg-95ef2aa95e252ea4b4fe610d3b037f34.ctex"]
+source_file="res://assets/sprites/zombies/zombie_2/Run.png"
+dest_files=["res://.godot/imported/Run.png-131051795b7b71d3c26c641b32f9e262.ctex"]
 
 [params]
 

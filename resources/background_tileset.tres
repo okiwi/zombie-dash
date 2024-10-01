@@ -4,6 +4,7 @@
 load_path = "res://.godot/imported/TX Tileset Grass.png-a0f11d92068aff76ba0efead5ade7baf.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fr3nq"]
+resource_name = "Grass & Stones"
 texture = SubResource("CompressedTexture2D_74hnv")
 0:0/0 = 0
 1:0/0 = 0

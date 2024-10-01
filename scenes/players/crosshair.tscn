@@ -15,6 +15,7 @@ region = Rect2(97, 49, 14, 14)
 [node name="Crosshair" type="Area2D"]
 z_index = 200
 script = ExtResource("1_gycjl")
+speed = 120.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qrgef")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sa3bp2xbnq8j"
-path="res://.godot/imported/wood_panel.png-35a396b6ba52a8786dddf423e527a27b.ctex"
+uid="uid://dr8i5gaak2rbm"
+path="res://.godot/imported/Walk.png-b70757e3366d3aff0b518004fcdbbc46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/wood_panel.png"
-dest_files=["res://.godot/imported/wood_panel.png-35a396b6ba52a8786dddf423e527a27b.ctex"]
+source_file="res://assets/sprites/zombies/zombie_3/Walk.png"
+dest_files=["res://.godot/imported/Walk.png-b70757e3366d3aff0b518004fcdbbc46.ctex"]
 
 [params]
 

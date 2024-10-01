@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://bn88jjcoejphj" path="res://scenes/zombie/zombie.tscn" id="2_xm6dd"]
 [ext_resource type="PackedScene" uid="uid://2aeraftlkaqi" path="res://scenes/main.tscn" id="3_52c4u"]
 [ext_resource type="TileSet" uid="uid://dai1vip4rhlq4" path="res://resources/background_tileset.tres" id="4_5gerx"]
-[ext_resource type="Texture2D" uid="uid://0ojjcq4b80fa" path="res://assets/sprites/cloud1.png" id="4_kv1e7"]
-[ext_resource type="Texture2D" uid="uid://bqy7uskk0txc8" path="res://assets/sprites/title.png" id="4_puthe"]
-[ext_resource type="Texture2D" uid="uid://ccw0v328r7xn5" path="res://assets/sprites/cloud2.png" id="5_qpe66"]
-[ext_resource type="Texture2D" uid="uid://dw3f8gb3rk8ek" path="res://assets/sprites/play.png" id="5_rjxn0"]
-[ext_resource type="Texture2D" uid="uid://cf66nknocxscm" path="res://assets/sprites/quit.png" id="6_23sox"]
-[ext_resource type="Texture2D" uid="uid://bf25dko8c3xbw" path="res://assets/sprites/cloud3.png" id="6_avh7r"]
+[ext_resource type="Texture2D" uid="uid://0ojjcq4b80fa" path="res://assets/sprites/clouds/cloud1.png" id="4_kv1e7"]
+[ext_resource type="Texture2D" uid="uid://bqy7uskk0txc8" path="res://assets/sprites/text/title.png" id="4_puthe"]
+[ext_resource type="Texture2D" uid="uid://ccw0v328r7xn5" path="res://assets/sprites/clouds/cloud2.png" id="5_qpe66"]
+[ext_resource type="Texture2D" uid="uid://dw3f8gb3rk8ek" path="res://assets/sprites/text/play.png" id="5_rjxn0"]
+[ext_resource type="Texture2D" uid="uid://cf66nknocxscm" path="res://assets/sprites/text/quit.png" id="6_23sox"]
+[ext_resource type="Texture2D" uid="uid://bf25dko8c3xbw" path="res://assets/sprites/clouds/cloud3.png" id="6_avh7r"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gsucf"]
 normal = Vector2(-1, 0)
