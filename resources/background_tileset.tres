@@ -1,11 +1,11 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dai1vip4rhlq4"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_74hnv"]
-load_path = "res://.godot/imported/TX Tileset Grass.png-a0f11d92068aff76ba0efead5ade7baf.ctex"
+[ext_resource type="Texture2D" uid="uid://kqbap4qvgtlb" path="res://assets/sprites/grass_tileset.png" id="1_su42x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fr3nq"]
 resource_name = "Grass & Stones"
-texture = SubResource("CompressedTexture2D_74hnv")
+texture = ExtResource("1_su42x")
+use_texture_padding = false
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
