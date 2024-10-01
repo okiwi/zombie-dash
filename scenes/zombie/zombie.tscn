@@ -6,10 +6,11 @@
 [ext_resource type="SpriteFrames" uid="uid://baufp5u5muwll" path="res://resources/zombie_3_frames.tres" id="4_kcvoe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6al3e"]
-size = Vector2(58, 118)
+size = Vector2(40, 64)
 
 [node name="Zombie" type="CharacterBody2D"]
 script = ExtResource("1_7wpk0")
+speed = 32.0
 sprite_frames = Array[SpriteFrames]([ExtResource("2_8m1jv"), ExtResource("3_rc68x"), ExtResource("4_kcvoe")])
 metadata/_edit_group_ = true
 
@@ -21,7 +22,6 @@ unique_name_in_owner = true
 autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(1.8, 1.8)
 sprite_frames = ExtResource("2_8m1jv")
 animation = &"idle"
 autoplay = "idle"

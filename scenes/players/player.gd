@@ -16,7 +16,8 @@ func _ready() -> void:
 	var crosshair = crosshair_scene.instantiate()
 	crosshair.number = number
 	crosshair.name = "Crosshair" + str(number)
-	crosshair.position.y = randf_range(-100, 100)
+	crosshair.position.x = 350
+	crosshair.position.y = randf_range(100, 350)
 	crosshair.color = crosshair_color
 	get_parent().add_child(crosshair)
 

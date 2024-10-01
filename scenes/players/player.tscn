@@ -6,11 +6,13 @@
 [ext_resource type="SpriteFrames" uid="uid://baufp5u5muwll" path="res://resources/zombie_3_frames.tres" id="4_mstxp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wrs1"]
-size = Vector2(58, 118)
+size = Vector2(34, 68)
 
 [node name="Player" type="CharacterBody2D" groups=["players"]]
 z_index = 100
 script = ExtResource("1_fff2d")
+run_boost = 48.0
+speed = 32.0
 sprite_frames = Array[SpriteFrames]([ExtResource("2_g323d"), ExtResource("3_vyhye"), ExtResource("4_mstxp")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -18,7 +20,6 @@ shape = SubResource("RectangleShape2D_5wrs1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-3.8147e-06, -1.90735e-06)
-scale = Vector2(1.8, 1.8)
 sprite_frames = ExtResource("2_g323d")
 animation = &"idle"
 autoplay = "idle"
