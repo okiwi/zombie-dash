@@ -15,7 +15,7 @@ jobs:
     permissions:
       contents: write
     container:
-      image: barichello/godot-ci:4.3-stable
+      image: barichello/godot-ci:4.3
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -60,7 +60,7 @@ jobs:
       contents: write
 
     container:
-      image: barichello/godot-ci:4.3-stable
+      image: barichello/godot-ci:4.3
 
     steps:
       - name: Checkout
@@ -90,7 +90,7 @@ jobs:
       contents: write
 
     container:
-      image: barichello/godot-ci:4.3-stable
+      image: barichello/godot-ci:4.3
 
     steps:
       - name: Checkout
@@ -128,7 +128,7 @@ jobs:
       - name: Set up GitVersion
         uses: gittools/actions/gitversion/setup@v0.9.15
         with:
-          versionSpec: '5.x'
+          versionSpec: "5.x"
 
       - name: Execute GitVersion
         uses: gittools/actions/gitversion/execute@v0.9.15
