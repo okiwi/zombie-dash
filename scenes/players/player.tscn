@@ -6,10 +6,11 @@
 [ext_resource type="SpriteFrames" uid="uid://baufp5u5muwll" path="res://resources/zombie_3_frames.tres" id="4_mstxp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wrs1"]
-size = Vector2(34, 68)
+size = Vector2(32, 64)
 
 [node name="Player" type="CharacterBody2D" groups=["players"]]
 z_index = 100
+collision_layer = 2
 script = ExtResource("1_fff2d")
 run_boost = 48.0
 speed = 32.0

@@ -9,8 +9,6 @@
 [node name="Main" type="Node"]
 
 [node name="Level" parent="." instance=ExtResource("1_js5b6")]
-zombies_num = 2
-players = 2
 
 [node name="GUI" type="Control" parent="."]
 process_mode = 3

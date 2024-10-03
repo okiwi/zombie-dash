@@ -7,8 +7,6 @@ extends Character
 @export var crosshair_color: Color
 
 
-var display_name: String
-
 var speed_boost
 
 
