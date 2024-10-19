@@ -1,10 +1,18 @@
 # Zombie _Dash_
 
-Un jeu de zombies multijoueur local basé sur le mode de jeu de course « Hidden in Plain Sight » 🕹️
+A local multiplayer zombie game based on the race gamemode of "Hidden in Plain Sight" 🕹️
 
-_Créé lors du GeekCamp de septembre 2024 🏕️_
+Made with the awesome [Godot Engine](https://godotengine.org) 🤖
 
-## Remerciements
-* Charles - playtesting 👾
-* Paul Doazan - Idée/Game Director 💡
-* All of Okiwi GeekCamp septembre 2024 participants ⛺
+_Created during the September 2024 edition of the Okiwi GeekCamp 🏕️_
+
+## Credits
+Title & text font - [Peaberry Font](https://emhuo.itch.io/peaberry-pixel-font) by [@emhuo](https://emhuo.itch.io/)
+
+Background tileset from [Pixel Art Top Down - Basic](https://cainos.itch.io/pixel-art-top-down-basic) & Zombie sprites from [Pixel Art Monster - Dungeon](https://cainos.itch.io/pixel-art-monster-dungeon) by [@Cainos](https://cainos.itch.io/)
+
+## Special thanks
+* **Cainos** for letting us use their wonderful zombie sprites 🧟
+* **Paul Doazan** for the idea & direction 💡
+* **Charles** for playtesting 👾
+* And all of the GeekCamp participants ⛺

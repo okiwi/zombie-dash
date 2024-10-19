@@ -909,6 +909,9 @@ rest = Transform2D(1, 0, 0, 1, 0, -108)
 [node name="Head" type="Bone2D" parent="Skeleton2D/Base"]
 position = Vector2(10, -54)
 rest = Transform2D(1, 0, 0, 1, 10, -54)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
 metadata/_edit_group_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Skeleton2D/Base/Head"]
@@ -918,6 +921,9 @@ remote_path = NodePath("../../../../Sprites/Head")
 [node name="Body" type="Bone2D" parent="Skeleton2D/Base"]
 position = Vector2(0.5, 18)
 rest = Transform2D(1, 0, 0, 1, 0.5, 18)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
 metadata/_edit_group_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Skeleton2D/Base/Body"]
@@ -927,6 +933,9 @@ remote_path = NodePath("../../../../Sprites/Body")
 [node name="RightArm" type="Bone2D" parent="Skeleton2D/Base"]
 position = Vector2(0.5, -25.5)
 rest = Transform2D(1, 0, 0, 1, 0.5, -25.5)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
 metadata/_edit_group_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Skeleton2D/Base/RightArm"]
@@ -936,6 +945,9 @@ remote_path = NodePath("../../../../Sprites/RightArm")
 [node name="LeftArm" type="Bone2D" parent="Skeleton2D/Base"]
 position = Vector2(-2.5, -34)
 rest = Transform2D(1, 0, 0, 1, -2.5, -34)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
 metadata/_edit_group_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Skeleton2D/Base/LeftArm"]
@@ -945,6 +957,9 @@ remote_path = NodePath("../../../../Sprites/LeftArm")
 [node name="RightLeg" type="Bone2D" parent="Skeleton2D/Base"]
 position = Vector2(-10, 12.5)
 rest = Transform2D(1, 0, 0, 1, -10, 12.5)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
 metadata/_edit_group_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Skeleton2D/Base/RightLeg"]
@@ -954,6 +969,9 @@ remote_path = NodePath("../../../../Sprites/RightLeg")
 [node name="LeftLeg" type="Bone2D" parent="Skeleton2D/Base"]
 position = Vector2(7, 12.5)
 rest = Transform2D(1, 0, 0, 1, 7, 12.5)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
 metadata/_edit_group_ = true
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Skeleton2D/Base/LeftLeg"]
