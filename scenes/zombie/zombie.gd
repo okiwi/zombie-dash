@@ -14,10 +14,10 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	if not is_moving:
-		$AnimatedSprite2D.play("idle")
+		$AnimatedCharacter/AnimationPlayer.play("idle")
 		return
 	
-	$AnimatedSprite2D.play("walk")
+	$AnimatedCharacter/AnimationPlayer.play("walk")
 	velocity = Vector2.RIGHT * speed
 	move_and_slide()
 

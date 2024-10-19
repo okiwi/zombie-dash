@@ -18,12 +18,13 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=360
+window/size/viewport_width=2560
+window/size/viewport_height=1440
 window/size/resizable=false
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="res://assets/sprites/cursor.png"
 
 [editor_plugins]
 

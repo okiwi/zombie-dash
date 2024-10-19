@@ -30,13 +30,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("shoot" + str(number)) and not has_shot:
 		$AudioStreamPlayer2D.play()
 		has_shot = true
-		$Bullet.visible = false
 		
 		if not target:
 			return
 		
 		target.set_physics_process(false)
-		target.find_child("AnimatedSprite2D").play("death")
+		target.find_child("AnimatedCharacter").find_child("AnimationPlayer").play("death")
 		
 		if not target.is_in_group("players"):
 			return

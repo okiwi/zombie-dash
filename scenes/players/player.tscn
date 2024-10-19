@@ -1,26 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwmbnsjex56yc"]
+[gd_scene load_steps=4 format=3 uid="uid://cwmbnsjex56yc"]
 
 [ext_resource type="Script" path="res://scenes/players/player.gd" id="1_fff2d"]
-[ext_resource type="SpriteFrames" uid="uid://bux1vjcetfh5c" path="res://resources/zombie_1_frames.tres" id="2_g323d"]
-[ext_resource type="SpriteFrames" uid="uid://w5p7b0fq4m0r" path="res://resources/zombie_2_frames.tres" id="3_vyhye"]
-[ext_resource type="SpriteFrames" uid="uid://baufp5u5muwll" path="res://resources/zombie_3_frames.tres" id="4_mstxp"]
+[ext_resource type="PackedScene" uid="uid://ba18oov1gelf4" path="res://scenes/animated_character.tscn" id="5_wano2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wrs1"]
-size = Vector2(32, 64)
+size = Vector2(70, 236)
 
 [node name="Player" type="CharacterBody2D" groups=["players"]]
 z_index = 100
 collision_layer = 2
 script = ExtResource("1_fff2d")
-run_boost = 48.0
-speed = 32.0
-sprite_frames = Array[SpriteFrames]([ExtResource("2_g323d"), ExtResource("3_vyhye"), ExtResource("4_mstxp")])
+run_boost = 50.0
+speed = 60.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.75, -118.5)
 shape = SubResource("RectangleShape2D_5wrs1")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-3.8147e-06, -1.90735e-06)
-sprite_frames = ExtResource("2_g323d")
-animation = &"idle"
-autoplay = "idle"
+[node name="AnimatedCharacter" parent="." instance=ExtResource("5_wano2")]

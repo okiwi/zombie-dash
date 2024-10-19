@@ -1,37 +1,84 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsa1rki5h06hq"]
+[gd_scene load_steps=13 format=3 uid="uid://dsa1rki5h06hq"]
 
 [ext_resource type="Script" path="res://scenes/players/crosshair.gd" id="1_gycjl"]
-[ext_resource type="Texture2D" uid="uid://b0ee0jb33a803" path="res://assets/sprites/crosshairs.png" id="2_xdpcc"]
-[ext_resource type="AudioStream" uid="uid://c3lx4ti2i87le" path="res://assets/sounds/shot.mp3" id="3_lwmjf"]
-[ext_resource type="Texture2D" uid="uid://ca4ooasvktrmt" path="res://assets/sprites/bullet.png" id="4_adtc0"]
+[ext_resource type="Texture2D" uid="uid://b2of4bhjbhvhc" path="res://assets/sprites/crosshair.png" id="2_kh7d6"]
+[ext_resource type="AudioStream" uid="uid://b3ycduu2oujgl" path="res://assets/sounds/arrow-hit.wav" id="3_c2e62"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qrgef"]
-size = Vector2(16, 16)
+size = Vector2(64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rbb3m"]
-atlas = ExtResource("2_xdpcc")
-region = Rect2(97, 49, 14, 14)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ely6v"]
+atlas = ExtResource("2_kh7d6")
+region = Rect2(3, 0, 121, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_56aoi"]
+atlas = ExtResource("2_kh7d6")
+region = Rect2(131, 0, 121, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt6nc"]
+atlas = ExtResource("2_kh7d6")
+region = Rect2(259, 0, 121, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vl3vl"]
+atlas = ExtResource("2_kh7d6")
+region = Rect2(387, 0, 121, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0v5h"]
+atlas = ExtResource("2_kh7d6")
+region = Rect2(259, 0, 121, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fulk"]
+atlas = ExtResource("2_kh7d6")
+region = Rect2(131, 0, 121, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bniio"]
+atlas = ExtResource("2_kh7d6")
+region = Rect2(3, 0, 121, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_daf4e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ely6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_56aoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt6nc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vl3vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0v5h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fulk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bniio")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Crosshair" type="Area2D"]
 z_index = 200
 collision_mask = 2
 script = ExtResource("1_gycjl")
-speed = 120.0
+speed = 200.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qrgef")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.118783, 0.7446, 1, 1)
-scale = Vector2(2, 2)
-texture = SubResource("AtlasTexture_rbb3m")
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_daf4e")
+autoplay = "default"
+frame_progress = 0.524079
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_lwmjf")
-volume_db = 20.0
-
-[node name="Bullet" type="Sprite2D" parent="."]
-position = Vector2(-19, 27)
-scale = Vector2(0.0127298, 0.0127298)
-texture = ExtResource("4_adtc0")
-offset = Vector2(-70, -424)
+stream = ExtResource("3_c2e62")

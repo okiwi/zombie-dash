@@ -26,14 +26,14 @@ func _physics_process(_delta: float) -> void:
 	
 	if Input.is_action_pressed("move" + str(number)):
 		direction = Vector2.RIGHT
-		$AnimatedSprite2D.play("walk")
+		$AnimatedCharacter/AnimationPlayer.play("walk")
 	elif Input.is_action_pressed("run" + str(number)):
 		direction = Vector2.RIGHT
 		speed_boost = run_boost
-		$AnimatedSprite2D.play("run")
+		$AnimatedCharacter/AnimationPlayer.play("run")
 	else:
 		direction = Vector2.ZERO
-		$AnimatedSprite2D.play("idle")
+		$AnimatedCharacter/AnimationPlayer.play("idle")
 	
 	velocity = direction * (speed + speed_boost)
 	
