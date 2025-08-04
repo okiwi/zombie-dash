@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bn88jjcoejphj"]
 
-[ext_resource type="Script" path="res://scenes/zombie/zombie.gd" id="1_7wpk0"]
+[ext_resource type="Script" uid="uid://bnu2usuvb4xm6" path="res://scenes/zombie/zombie.gd" id="1_7wpk0"]
 [ext_resource type="PackedScene" uid="uid://ba18oov1gelf4" path="res://scenes/animated_character.tscn" id="5_7uovm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vbtda"]

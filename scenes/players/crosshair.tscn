@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dsa1rki5h06hq"]
 
-[ext_resource type="Script" path="res://scenes/players/crosshair.gd" id="1_gycjl"]
+[ext_resource type="Script" uid="uid://cubp7i3k003sr" path="res://scenes/players/crosshair.gd" id="1_gycjl"]
 [ext_resource type="Texture2D" uid="uid://b2of4bhjbhvhc" path="res://assets/sprites/crosshair.png" id="2_kh7d6"]
 [ext_resource type="AudioStream" uid="uid://b3ycduu2oujgl" path="res://assets/sounds/arrow-hit.wav" id="3_c2e62"]
 

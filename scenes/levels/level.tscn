@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://dd83kntlfisx8"]
 
-[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_lble1"]
+[ext_resource type="Script" uid="uid://xjvgk80ahdhc" path="res://scenes/levels/level.gd" id="1_lble1"]
 [ext_resource type="PackedScene" uid="uid://bn88jjcoejphj" path="res://scenes/zombie/zombie.tscn" id="2_f4kno"]
 [ext_resource type="TileSet" uid="uid://dai1vip4rhlq4" path="res://resources/background_tileset.tres" id="4_em7cp"]
 [ext_resource type="PackedScene" uid="uid://cwmbnsjex56yc" path="res://scenes/players/player.tscn" id="4_g23f4"]

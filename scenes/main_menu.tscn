@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=4 uid="uid://juw4qx230wq1"]
 
-[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_i3rqy"]
+[ext_resource type="Script" uid="uid://r0b62djdifda" path="res://scenes/main_menu.gd" id="1_i3rqy"]
 [ext_resource type="PackedScene" uid="uid://bn88jjcoejphj" path="res://scenes/zombie/zombie.tscn" id="2_xm6dd"]
 [ext_resource type="PackedScene" uid="uid://2aeraftlkaqi" path="res://scenes/main.tscn" id="3_52c4u"]
 [ext_resource type="TileSet" uid="uid://dai1vip4rhlq4" path="res://resources/background_tileset.tres" id="4_5gerx"]
@@ -88,7 +88,7 @@ icon_alignment = 1
 
 [node name="Spawn" type="Node2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-59, 1301)
+position = Vector2(-60, 1300)
 
 [node name="Timer" type="Timer" parent="Spawn"]
 wait_time = 3.0
@@ -96,7 +96,8 @@ autostart = true
 
 [node name="Edge" type="Area2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(668, 0)
+position = Vector2(2620, 1300)
+monitorable = false
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Edge"]

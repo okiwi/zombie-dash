@@ -844,11 +844,11 @@ tracks/12/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tcf0d"]
 _data = {
-"RESET": SubResource("Animation_olhf4"),
-"death": SubResource("Animation_clx1n"),
-"idle": SubResource("Animation_ebdwy"),
-"run": SubResource("Animation_adi0r"),
-"walk": SubResource("Animation_hqqjy")
+&"RESET": SubResource("Animation_olhf4"),
+&"death": SubResource("Animation_clx1n"),
+&"idle": SubResource("Animation_ebdwy"),
+&"run": SubResource("Animation_adi0r"),
+&"walk": SubResource("Animation_hqqjy")
 }
 
 [node name="AnimatedCharacter" type="Node2D"]
