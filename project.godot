@@ -14,12 +14,11 @@ config/name="Zombie Dash"
 config/version="1.3.0"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=2560
-window/size/viewport_height=1440
+window/size/viewport_height=1408
 window/size/resizable=false
 window/size/window_width_override=1280
 window/size/window_height_override=720
